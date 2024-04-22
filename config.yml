@@ -1,0 +1,2 @@
+default:
+  incidence_data_paths: [{"url": "https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2005-2019.xlsx","skip":11,"year":2020},{"url": "https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx", "skip":8, "year":2035}]

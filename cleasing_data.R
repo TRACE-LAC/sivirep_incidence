@@ -8,11 +8,7 @@
 #' @export
 import_data_incidencia <- function() {
   proyecciones <- NULL
-  ruta_data <- config::get(file =
-                             system.file("extdata",
-                                         "config.yml",
-                                         package = "sivirep"),
-                           "incidence_data_paths")
+  ruta_data <- config::get(file = "config.yml", "incidence_data_paths")
   for (ruta_inciden in ruta_data) {
     extdata_path <- system.file("extdata", package = "sivirep")
     ruta_archivo <- file.path(extdata_path, paste0("proyecciones",

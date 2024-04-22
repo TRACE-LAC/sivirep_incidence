@@ -47,7 +47,7 @@ import_data_incidencia <- function() {
 #'     proyecciones = proyecciones)
 #' @export
 limpiar_data_incidencia <- function(proyecciones) {
-  data_incidencia_limpia <- limpiar_encabezado(proyecciones)
+  data_incidencia_limpia <- sivirep::limpiar_encabezado(proyecciones)
   data_incidencia_limpia <- data_incidencia_limpia %>%
     tidyr::pivot_longer(
       cols = starts_with("hombres_") |
@@ -62,7 +62,7 @@ limpiar_data_incidencia <- function(proyecciones) {
                                              `85_y_mas` = "85+"))
   data_incidencia_limpia <- data_incidencia_limpia %>%
     dplyr::filter(!is.na(data_incidencia_limpia[["grupo_edad"]]))
-  data_incidencia_limpia <- limpiar_encabezado(data_incidencia_limpia)
+  data_incidencia_limpia <- sivirep::limpiar_encabezado(data_incidencia_limpia)
   data_incidencia_limpia <- data_incidencia_limpia[
     duplicated(data_incidencia_limpia), ]
   return(data_incidencia_limpia)

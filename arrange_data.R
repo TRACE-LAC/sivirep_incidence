@@ -6,7 +6,10 @@ for (year in seq(2020,2022)) {
   eval(parse(text = paste0(pop_year,
                            ' <- pob_riesgo_210_dengue[c("cod_dpto","nombre_departamento","cod_mpio","nombre_municipio",population)]')))
   eval(parse(text =  paste0(pop_year,'[[population]] <- as.numeric(', pop_year, '[[population]])')))
-  save(pop_year, file = paste0("./data/poblacion_riesgo/210_dengue/", name_file, ".rda"), compress = "xz")
+  eval(parse(text = 
+               paste0('save(', pop_year,
+                      ', file = paste0("./data/poblacion_riesgo/210_dengue/", name_file, ".rda")',
+                      ', compress = "xz")')))
 }
 
 for (year in seq(2023,2023)) {
@@ -16,7 +19,10 @@ for (year in seq(2023,2023)) {
   eval(parse(text = paste0(pop_year,
                            ' <- pob_riesgo_420_leishmaniasis_cutanea[c("cod_dpto","nombre_departamento","cod_mpio","nombre_municipio",population)]')))
   eval(parse(text =  paste0(pop_year,'[[population]] <- as.numeric(', pop_year, '[[population]])')))
-  save(pop_year, file = paste0("./data/poblacion_riesgo/420_leishmaniasis_cutanea/", name_file, ".rda"), compress = "xz")
+  eval(parse(text = 
+               paste0('save(', pop_year,
+                      ', file = paste0("./data/poblacion_riesgo/420_leishmaniasis_cutanea/", name_file, ".rda")',
+                      ', compress = "xz")')))
 }
 
 for (year in seq(2023,2023)) {
@@ -26,7 +32,10 @@ for (year in seq(2023,2023)) {
   eval(parse(text = paste0(pop_year,
                            ' <- pob_riesgo_430_leishmaniasis_mucosa[c("cod_dpto","nombre_departamento","cod_mpio","nombre_municipio",population)]')))
   eval(parse(text =  paste0(pop_year,'[[population]] <- as.numeric(', pop_year, '[[population]])')))
-  save(pop_year, file = paste0("./data/poblacion_riesgo/430_leishmaniasis_mucosa/", name_file, ".rda"), compress = "xz")
+  eval(parse(text = 
+               paste0('save(', pop_year,
+                      ', file = paste0("./data/poblacion_riesgo/430_leishmaniasis_mucosa/", name_file, ".rda")',
+                      ', compress = "xz")')))
 }
 
 for (year in seq(2022,2023)) {
@@ -36,7 +45,10 @@ for (year in seq(2022,2023)) {
   eval(parse(text = paste0(pop_year,
                            ' <- pob_riesgo_440_leishmaniasis_visceral[c("cod_dpto","nombre_departamento","cod_mpio","nombre_municipio",population)]')))
   eval(parse(text =  paste0(pop_year,'[[population]] <- as.numeric(', pop_year, '[[population]])')))
-  save(pop_year, file = paste0("./data/poblacion_riesgo/440_leishmaniasis_visceral/", name_file, ".rda"), compress = "xz")
+  eval(parse(text = 
+               paste0('save(', pop_year,
+                      ', file = paste0("./data/poblacion_riesgo/440_leishmaniasis_visceral/", name_file, ".rda")',
+                      ', compress = "xz")')))
 }
 
 for (year in seq(2021,2023)) {
@@ -46,7 +58,10 @@ for (year in seq(2021,2023)) {
   eval(parse(text = paste0(pop_year,
                            ' <- pob_riesgo_465_malaria[c("cod_dpto","nombre_departamento","cod_mpio","nombre_municipio",population)]')))
   eval(parse(text =  paste0(pop_year,'[[population]] <- as.numeric(', pop_year, '[[population]])')))
-  save(pop_year, file = paste0("./data/poblacion_riesgo/465_malaria/", name_file, ".rda"), compress = "xz")
+  eval(parse(text = 
+               paste0('save(', pop_year,
+                      ', file = paste0("./data/poblacion_riesgo/465_malaria/", name_file, ".rda")',
+                      ', compress = "xz")')))
 }
 
 ## Proyeciones poblacionales DANE

@@ -73,7 +73,8 @@ for (year in seq(2005, 2035)) {
     which(proyecs_2005_2035_order[["ano"]] == year)[length(which(proyecs_2005_2035_order[["ano"]] == year))]
   pop_year <- paste0("proyecciones_", year)
   name_file <- paste0("proyecciones_", year)
-  eval(parse(text = 'pop_year <- proyecs_2005_2035_order[start_index:last_index, ]'))
+  eval(parse(text = paste0(pop_year,
+                           ' <- proyecs_2005_2035_order[start_index:last_index, ]')))
   save(pop_year, file = paste0("./data/proyecciones/", name_file, ".rda"), compress = "xz")
   start_index <- last_index + 1
 }
